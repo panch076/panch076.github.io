@@ -1,0 +1,36 @@
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    place-items: center;
+    background: #000000;
+    
+  }
+  h1 {
+    font-family: 'Courier New', Courier, monospace, serif;
+  }
+ 
+  .decode-heading {
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: #349ed0;
+    white-space: pre; /* keeps spaces intact */
+  }
+ 
+  .decode-heading span {
+    display: inline-block;
+    transition: opacity 0.5s ease, filter 0.5s ease;
+  }
+ 
+  /* characters still cycling are faded and blurred */
+  .decode-heading .cycling {
+    opacity: 0.3;
+    filter: blur(3px);
+  }
+  p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    font-family: JetBrains Mono, monospace;
+  }
