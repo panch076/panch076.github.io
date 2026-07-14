@@ -1,10 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My GitHub Pages Site</title>
+    <meta charset="UTF-8">
+    <title>Krishay Panchal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>This is my first page.</p>
+        <h1 class="decode-heading" id="heading">Welcome to my site</h1>
+
+    <p>This site is under development currently
+        
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function () {
+  const el = document.getElementById("heading");
+  const finalText = el.textContent;              // the heading to spell out
+  const pool = "abcdefghijklmnopqrstuvwxyz";     // letters only — no jarring symbols
+  const cyclesPerChar = 6;                       // how many random chars before locking
+  const frameDelay = 90;                         // ms between cycles (slower = calmer)
+  const lockStagger = 2;                         // frames between each character locking in
+ 
+  // Respect users who prefer reduced motion
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+ 
+  // Build a span per character so we can style locked vs cycling separately
+  el.textContent = "";
+  const spans = [...finalText].map(ch => {
+    const s = document.createElement("span");
+    s.dataset.char = ch;
+    s.className = ch === " " ? "" : "cycling";
+    s.textContent = ch === " " ? " " : randomChar();
+    el.appendChild(s);
+    return s;
+  });
+ 
+  function randomChar() {
+    return pool[Math.floor(Math.random() * pool.length)];
+  }
+ 
+  let frame = 0;
+  const timer = setInterval(() => {
+    let stillCycling = false;
+ 
+    spans.forEach((s, i) => {
+      const target = s.dataset.char;
+      if (target === " ") return;
+ 
+      // Each character locks in after its own threshold, left to right
+      const lockFrame = cyclesPerChar + i * lockStagger;
+ 
+      if (frame >= lockFrame) {
+        s.textContent = target;
+        s.classList.remove("cycling");   // fades and sharpens into place
+      } else {
+        s.textContent = randomChar();
+        stillCycling = true;
+      }
+    });
+ 
+    frame++;
+    if (!stillCycling) clearInterval(timer);
+  }, frameDelay);
+})();
+</script>
 </body>
 </html>
+
