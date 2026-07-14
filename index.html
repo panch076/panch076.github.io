@@ -6,11 +6,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <h1 class="decode-heading" id="heading">Welcome to my site</h1>
+        <h1 class="decode-heading" id="heading">Krishay's Site</h1>
 
-    <p>This site is under development currently
-        
-    </p>
+    <p>This site is under development currently.</p>
+    <p class="link-text" ><a href="projects.html">Click here to see my projects</a> </p>
 
 
 
@@ -31,16 +30,14 @@
 <script>
 (function () {
   const el = document.getElementById("heading");
-  const finalText = el.textContent;              // the heading to spell out
-  const pool = "abcdefghijklmnopqrstuvwxyz";     // letters only — no jarring symbols
-  const cyclesPerChar = 6;                       // how many random chars before locking
-  const frameDelay = 90;                         // ms between cycles (slower = calmer)
-  const lockStagger = 2;                         // frames between each character locking in
+  const finalText = el.textContent;
+  const pool = "abcdefghijklmnopqrstuvwxyz";
+  const cyclesPerChar = 6;
+  const frameDelay = 90;
+  const lockStagger = 2;
  
-  // Respect users who prefer reduced motion
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
  
-  // Build a span per character so we can style locked vs cycling separately
   el.textContent = "";
   const spans = [...finalText].map(ch => {
     const s = document.createElement("span");
@@ -63,12 +60,11 @@
       const target = s.dataset.char;
       if (target === " ") return;
  
-      // Each character locks in after its own threshold, left to right
       const lockFrame = cyclesPerChar + i * lockStagger;
  
       if (frame >= lockFrame) {
         s.textContent = target;
-        s.classList.remove("cycling");   // fades and sharpens into place
+        s.classList.remove("cycling");  
       } else {
         s.textContent = randomChar();
         stillCycling = true;
