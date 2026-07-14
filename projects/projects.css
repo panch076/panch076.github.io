@@ -1,6 +1,7 @@
+
 body {
     background-color: #000000;
-    background-image: linear-gradient(45deg, #0b8383 10%, #000000 65%, #ff0c0c56 90%);
+    background-image: linear-gradient(30deg, #1a193c60 15%, #0a047680 30%,  #00e1ff82 90%);
     background-size: 100% 500%;
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
@@ -19,12 +20,13 @@ body {
     }
     .tile-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         padding: 10px;
     }
     .tile {
-        background-color: #252525;
+        background-color: #245372;
+        background-image: linear-gradient(30deg, #1a193c00 15%, #0a047600 30%,  #00e1ff57 90%);
         border: 1px solid #ccc;
         border-radius: 8px;
         padding: 2px;
@@ -35,4 +37,4 @@ body {
         font-weight: 200;
         font-family: jetbrains mono, monospace;
         font-weight: 100;
-    }
+    } 
