@@ -60,9 +60,9 @@ body {
     font-family: 'Courier New', Courier, monospace, serif;
     display: flex;
     gap: 20px;
+  }
+  .nav-links a {
     text-decoration: none;
-
-
   }
   .tile-container {
         display: grid;

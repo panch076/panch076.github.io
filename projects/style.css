@@ -58,7 +58,7 @@ body {
     }
     .tile:hover {
         transform: translateY(-6px);
-        box-shadow:scaleX(1.05) 0 8px 16px rgba(0, 0, 0, 0.384);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.576);
     }
     .tile-link,
     .link-text a{
@@ -69,14 +69,14 @@ body {
         justify-content: flex-end;
         gap: 20px;
         padding: 15px 25px;
+        text-decoration: none;
     }
-    nav-links {
+    .nav-links {
         color: #ffffff;
         font-family: 'Courier New', Courier, monospace, serif;
         display: flex;
         gap: 20px;
-<<<<<<< HEAD
     }
-=======
+    .nav-links a {
+        text-decoration: none;
     }
->>>>>>> fce8808 (lots of stuff)
