@@ -6,10 +6,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <h1 class="decode-heading" id="heading">Krishay's Site</h1>
+  <nav class="top-nav">
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects">Projects</a>
+        <a href="contact">Contact</a>
+    </div>
+  </nav>
+  <h1 class="decode-heading" id="heading">Krishay's Site</h1>
 
     <p>This site is under development currently.</p>
-    <p class="link-text" ><a href="projects">Click here to see my projects</a> </p>
+  <div class="tile-container">
+    <a href="projects" class="tile-link">
+      <div class="tile">
+        <h2>Projects</h2>
+        <img src="projects/project1/project1.png" alt="image1">
+        <p>Check out my projects.</p>
+      </div>
+    </a>
+    <a href="contact" class="tile-link">
+      <div class="tile">
+        <h2>Contact</h2>
+        <img src="contact/contact.png" alt="contact-image">
+        <p>Get in touch with me.</p>
+      </div>
+    </a>
+  </div>
 
 
 
@@ -33,7 +55,7 @@
   const finalText = el.textContent;
   const pool = "abcdefghijklmnopqrstuvwxyz";
   const cyclesPerChar = 6;
-  const frameDelay = 90;
+  const frameDelay = 70;
   const lockStagger = 2;
  
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
