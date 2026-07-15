@@ -1,0 +1,12 @@
+body {
+    background-color: #000000;
+    background-image: linear-gradient(30deg, #1a193c60 10%, #0a047680 20%,  #00e1ff82 80%);
+    background-size: 100% 1500%;
+    background-repeat: no-repeat;
+    font-family: Courier New, monospace;
+    Color: #ffffff;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    align-content: center;
+}
