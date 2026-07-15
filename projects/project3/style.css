@@ -30,3 +30,33 @@ h1 {
     max-width: 40%;
     height: auto;
 }
+.link-text {
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace, serif;
+  
+  }
+  a:link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #ffffff6d;
+  }
+  a:hover {
+    color:  #8a1c1c;
+  }
+  .top-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 15px 25px;
+    color: #ffffff;
+  }
+  .nav-links {
+    font-family: 'Courier New', Courier, monospace, serif;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links a {
+    text-decoration: none;
+  }
