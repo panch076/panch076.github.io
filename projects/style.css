@@ -27,8 +27,9 @@ body {
         margin: 0 auto;
     }
     .tile {
-        background-color: #245372;
+        background-color: #24537200;
         background-image: linear-gradient(30deg, #1a193c00 15%, #0a047600 30%,  #00e1ff57 90%);
+        backdrop-filter: blur(10px);
         border: 1px solid #ccc;
         border-radius: 8px;
         padding: 2px;
@@ -40,3 +41,38 @@ body {
         font-family: jetbrains mono, monospace;
         font-weight: 100;
     } 
+
+    .link-text {
+        color: #ffffff;
+        font-family: JetBrains Mono, monospace;
+    
+    }
+    a:link {
+        color: #ffffff;
+    }
+    a:visited {
+        color: #06561f;
+    }
+    a:hover {
+        color:  #8a1c1c;
+    }
+    .tile:hover {
+        transform: translateY(-6px);
+        box-shadow:scaleX(1.05) 0 8px 16px rgba(0, 0, 0, 0.384);
+    }
+    .tile-link,
+    .link-text a{
+        text-decoration: none;
+    }
+    .top-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        padding: 15px 25px;
+    }
+    nav-links {
+        color: #ffffff;
+        font-family: 'Courier New', Courier, monospace, serif;
+        display: flex;
+        gap: 20px;
+    }
