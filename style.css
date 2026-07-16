@@ -88,7 +88,11 @@ body {
         font-weight: 200;
         font-family: jetbrains mono, monospace;
         font-weight: 100;
-    } 
+    }
+    .tile img {
+        max-width: 19%;
+        height: auto;
+    }
      .tile:hover {
         transform: translateY(-6px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.576);
@@ -102,5 +106,12 @@ body {
         color: #ffffff;
         font-family: 'Courier New', Courier, monospace, serif;
         font-size: 0.7rem;
+    }
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
     }
 
