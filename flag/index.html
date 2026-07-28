@@ -6,8 +6,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <video autoplay controls id="background-video">
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div id="video-wrapper">
+        <video playsinline controls id="background-video">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="reveal-banner">Click to reveal</div>
+    </div>
+
+    <script>
+        const banner = document.getElementById('reveal-banner');
+        const video = document.getElementById('background-video');
+        banner.addEventListener('click', () => {
+            banner.style.display = 'none';
+            video.play();
+        });
+    </script>
 </body>
